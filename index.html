@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ishan Pandya | Silicon Valley Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- PARTICLE BACKGROUND -->
+<div id="particles"></div>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>Ishan Pandya</h2>
+  <div>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-text">
+<h1>Hi, I'm Ishan 👋</h1>
+
+<h2 class="typing">Data Analyst • BI • Future Analytics Manager</h2>
+
+<p>
+Transforming data into strategy, insights, and business impact.
+</p>
+
+<button class="btn">Download Resume</button>
+<button class="btn-outline" onclick="window.open('https://github.com')">GitHub</button>
+</div>
+
+<img src="F:\Resume\Portfolio\Images\profilePicture.jpeg" alt="profile">
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2>🚀 Strategic Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+<h3>Executive KPI Dashboard</h3>
+<p>BI solution for leadership decision-making.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+<h3>Customer Analytics</h3>
+<p>Segmentation improving retention.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
+<h3>Workforce Forecasting</h3>
+<p>Predictive staffing model.</p>
+</div>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>🧠 Technical Expertise</h2>
+
+<div class="skill-box">
+<p>SQL</p><div class="bar"><div style="width:95%"></div></div>
+<p>Python</p><div class="bar"><div style="width:90%"></div></div>
+<p>Power BI</p><div class="bar"><div style="width:92%"></div></div>
+</div>
+
+</section>
+
+<!-- LEADERSHIP -->
+<section id="leadership">
+<h2>👑 Leadership</h2>
+
+<div class="card">
+<p>
+Led analytics initiatives and delivered insights to stakeholders.
+Manager-ready candidate for BI and strategy roles.
+</p>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>📬 Contact</h2>
+
+<form class="contact-form">
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Email">
+<textarea placeholder="Message"></textarea>
+<button class="btn">Send</button>
+</form>
+
+</section>
+
+<footer>
+© 2026 Ishan Pandya — Silicon Valley Portfolio
+</footer>
+
+<script>
+/* SIMPLE PARTICLES */
+const canvas = document.createElement('canvas');
+document.getElementById('particles').appendChild(canvas);
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for(let i=0;i<80;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*2+1,
+dx:Math.random()*0.5,
+dy:Math.random()*0.5
+});
+}
+
+function animate(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+particles.forEach(p=>{
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle="white";
+ctx.fill();
+
+p.x+=p.dx;
+p.y+=p.dy;
+
+if(p.x>canvas.width||p.y>canvas.height)p.x=0;
+});
+requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+</body>
+</html>

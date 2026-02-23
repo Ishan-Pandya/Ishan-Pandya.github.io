@@ -1,0 +1,142 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0b0f1a;
+color:white;
+overflow-x:hidden;
+}
+
+/* PARTICLES */
+#particles{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 8%;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav a:hover{color:#00e6ff;}
+
+/* HERO */
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:100px 8%;
+min-height:100vh;
+}
+
+.hero img{
+width:340px;
+border-radius:10%;
+border:3px solid #00e6ff;
+}
+
+/* BUTTONS */
+.btn{
+padding:12px 22px;
+background:#00e6ff;
+border:none;
+border-radius:25px;
+margin-right:10px;
+cursor:pointer;
+font-weight:600;
+}
+
+.btn-outline{
+padding:12px 22px;
+background:transparent;
+border:2px solid #00e6ff;
+color:#00e6ff;
+border-radius:25px;
+cursor:pointer;
+}
+
+/* GRID PROJECTS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+padding:0 8%;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+padding:20px;
+backdrop-filter:blur(10px);
+transition:0.3s;
+}
+
+.card img{
+width:100%;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #00e6ff;
+}
+
+/* SKILLS */
+.skill-box{
+padding:0 8%;
+}
+
+.bar{
+height:10px;
+background:#222;
+border-radius:20px;
+margin-bottom:20px;
+}
+
+.bar div{
+height:10px;
+background:#00e6ff;
+border-radius:20px;
+}
+
+/* CONTACT FORM */
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:15px;
+padding:0 8%;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:12px;
+border:none;
+border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+opacity:0.7;
+}
